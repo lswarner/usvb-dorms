@@ -1,0 +1,212 @@
+@CHARSET "ISO-8859-1";
+html, body {
+    background-color: #fff;
+    font-size: 14pt;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+
+/**************** USVB CSS ********************/
+
+h1 {
+  font-size: 26pt;
+}
+h2{
+  font-size: 22pt;
+}
+h3{
+  font-size: 18pt;
+}
+
+
+#header {
+  display: flex;
+  width: 100%;
+
+  background-color: #5899ff;
+  border-bottom: solid 4px #102299;
+}
+.nav-link{
+  text-decoration: none;
+  color: white;
+  font-size: 20pt;
+  margin: 8px 20px;
+}
+
+#content{
+  width: 80%;
+  margin: auto; text-align: center;
+}
+/********************
+  view: main.blade.php
+*/
+.main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.dorm {
+  flex-grow: 1;
+  flex-basis: 20%;
+}
+
+
+/********************
+   views/dorm.blade.php
+*/
+
+.dorm-main{
+  display: grid;
+  grid-template-columns: 16% auto;
+}
+
+.dorm-name{
+  display: block;
+}
+
+.dorm-layout {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  justify-content: center;
+}
+
+.student-link {
+  text-decoration: none;
+}
+
+  .student-link > div {
+  text-align: left;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 6px;
+  padding-left: 16px;
+  border-radius: 4px;
+}
+  .student-link > div:hover{
+    background-color: #d6d6d6;
+  }
+.student-name{
+  text-decoration: none;
+  display: block;
+  font-size: 16pt;
+  font-weight:bold;
+}
+.male{
+  color: #5899ff;
+}
+.female{
+  color: #FF69B4;
+}
+.student-id{
+  text-decoration: none;
+  color: #555;
+  display: inline;
+  font-size: 12pt;
+  font-style: italic;
+}
+
+/********************
+  view: student.blade.php
+*/
+.student-main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+.student-main > div {
+  justify-content: start;
+}
+
+
+/********************
+  views/unit.blade.php
+*/
+.unit{
+  display: grid;
+  grid-template-columns: [left-rooms] 50% [right-rooms] 50%;
+  grid-template-rows: [beds-back] 50px [beds-front] 50px [common] 50px;
+  justify-items: start;
+  margin: 30px;
+}
+
+
+.bedroom{
+  width: 100px;
+  color: white;
+  background: #5899ff;
+  border: solid 2px white;
+}
+  .bedroom.left {
+    justify-self: start;
+  }
+  .bedroom.right {
+    justify-self: end;
+  }
+.common,
+.kitchen{
+  width: 116px;
+  color: white;
+  background: #5899ff;
+  border: solid 2px white;
+}
+
+.kitchen{
+  justify-self: right;
+}
+.unit:hover{
+  cursor: pointer;
+}
+ .unit:hover > .bedroom,
+ .unit:hover > .common,
+ .unit:hover > .kitchen{
+   background: #3879df;
+ }
+
+
+.unit-id{
+  text-decoration: underline;
+  font-weight:bolder;
+  font-size: 22pt;
+  color: #000000;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.student {
+  font-style: italic;
+  list-style: none;
+}
+
+
+.OLD-student-name{
+  font-size: 16pt;
+  font-style: normal;
+  text-align: left;
+  padding-left: 10px;
+}
